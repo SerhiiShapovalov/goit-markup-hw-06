@@ -479,6 +479,16 @@ body {
   display: block;
   margin-left: auto;
   margin-bottom: 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  background-color: #404bbf;
+  border: none;
+  fill: #ffffff;
 }
 
 .backdrop.is-hidden .modal {
@@ -743,15 +753,16 @@ body {
   background-color: transparent;
 }
 
-.modal-input:not(:placeholder-shown):not(:focus):invalid {
-  background-color: rgba(228, 110, 51, 0.322);
-}
-
 .input-text {
   display: inline-block;
   font-size: 12px;
+  line-height: 1.17;
   color: #8e8f99;
   margin-bottom: 4px;
+}
+
+label[for="user-name"] {
+  line-height: 1.33;
 }
 
 .modal-coment {
@@ -781,6 +792,7 @@ body {
   display: flex;
   align-items: center;
   position: relative;
+  margin-bottom: 24px;
 }
 
 .check-text span {
@@ -818,7 +830,6 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 24px;
 }
 
 .btn {
@@ -839,15 +850,16 @@ body {
 }
 
 .subscribe-input {
-  width: 100%;
+  width: 264px;
   height: 40px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: transparent;
   outline: none;
-  padding: 8px 16px;
+  padding: 0 16px;
   resize: none;
+  color: #e7e9fc;
 }
 
 .subscribe-input::placeholder {
